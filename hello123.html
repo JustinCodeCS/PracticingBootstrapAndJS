@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9H Practice</title>
+</head>
+<body>
+  <input class="updated"  placeholder="Type Something" onkeyup="
+  updateLover(event);">
+  <p class="coolStuff"></p>
+  <script>
+    function updateLover(){
+      if(event.key != 'Enter'){
+        let updateP = document.querySelector('.coolStuff');
+        let updateButton = document.querySelector('.updated')
+        updateP.innerHTML = updateButton.value;
+      }
+
+    }
+  </script>
+</body>
+</html>

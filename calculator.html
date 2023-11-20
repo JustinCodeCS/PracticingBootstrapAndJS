@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+</head>
+<body>
+<button onclick="
+updateCalculation('1');
+">
+  1
+</button>
+<button onclick="
+updateCalculation('2');
+
+
+">
+  2
+</button>
+<button onclick="
+updateCalculation('3');
+
+
+">
+  3
+</button>
+<button onclick="
+updateCalculation('+');
+">
+  +
+</button
+>  
+<button onclick="
+eval(final);
+calculation = eval(final);
+console.log(calculation);
+">
+=
+</button>
+<script>
+  let calculation = ''
+  function updateCalculation(argument){
+    final = calculation += argument;
+    console.log(calculation);
+    return final;
+  }
+</script>
+</body>
+</html>

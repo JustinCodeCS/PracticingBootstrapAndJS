@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testing test</title>
+</head>
+<body>
+  <button onclick="
+  headTails('heads');
+  ">
+      Head
+  </button>
+  <button onclick="
+  headTails('tails');
+  ">
+    Tail
+  </button>
+  <script>
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins : 0,
+      losses : 0
+    };
+
+    function headTails(argument){
+      magicNumber = Math.random();
+      result = ''
+      opponentMove = ''
+      if (magicNumber < 0.5){
+        opponentMove = 'heads'
+        if(argument == opponentMove) {
+          score.wins += 1
+          console.log('You win!');
+        } else{
+          score.losses += 1
+          console.log('You lose!')
+        }
+      }else if(magicNumber > 0.5){
+        opponentMove = 'tails'
+        if(argument == opponentMove) {
+          score.wins += 1
+          console.log('You win!');
+        } else{
+          score.losses += 1
+          console.log('You lose!')
+        }
+      }
+    };
+    localStorage.setItem('score', JSON.stringify(score));
+  </script>
+</body>
+</html>

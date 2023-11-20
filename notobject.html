@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMillionare!</title>
+</head>
+<body>
+  <p>
+    <input placeholder="Test Me!" class="anInput" onkeydown="
+    upKeyDown(event);
+    ">
+    <button onclick="
+    updateName();
+    ">Submit</button>
+  </p>
+  <p class="result"></p>
+  <script>
+    let nameSubmit = document.querySelector('.anInput');
+    let result = document.querySelector('.result');
+    function upKeyDown(event){
+      if (event.key === 'Enter'){
+        updateName();
+      }
+    }
+    function updateName(){
+      result.innerHTML = 'Your name is: ' + nameSubmit.value;
+    }
+
+
+  </script>
+</body>
+</html>
